@@ -1,0 +1,13 @@
+services:
+  articles-app:
+    build: .
+    container_name: articles-list
+    ports:
+      - "3000:3000"
+    volumes:
+      - articles-data:/articles.json
+    restart: unless-stopped
+
+volumes:
+  articles-data:
+    driver: local 

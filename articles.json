@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "titre": "T-shirt",
+        "image": "image.avif",
+        "description": "Super t shirt confortable et tendance pour toutes les saisons."
+    },
+    {
+        "id": 2,
+        "titre": "Pullover",
+        "image": "image.avif",
+        "description": "Super pullover chaud et élégant pour les soirées fraîches."
+    },
+    {
+        "id": 3,
+        "titre": "Pull1",
+        "image": "image.avif",
+        "description": "Super pull1 au design unique et au tissu de qualité supérieure."
+    },
+    {
+        "id": 4,
+        "titre": "Pull2",
+        "image": "image.avif",
+        "description": "Super pull2 disponible en plusieurs coloris pour tous les styles."
+    },
+    {
+        "id": 5,
+        "titre": "Pull3",
+        "image": "image.avif",
+        "description": "Super pull3 parfait pour les journées décontractées en ville."
+    }
+]

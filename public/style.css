@@ -1,0 +1,77 @@
+/* Style minimaliste pour l'affichage des articles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    padding: 1rem;
+}
+
+header {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+main {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+#articles-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.article-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.article-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.article-card h2 {
+    font-size: 1rem;
+    margin: 0.8rem;
+    color: #333;
+}
+
+.img-container {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+}
+
+.article-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.article-card:hover img {
+    transform: scale(1.05);
+}
+
+.article-card p {
+    font-size: 0.85rem;
+    color: #666;
+    padding: 0 0.8rem 0.8rem;
+}
+
+footer {
+    margin-top: 2rem;
+    text-align: center;
+    color: #777;
+    font-size: 0.8rem;
+}
