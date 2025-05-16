@@ -1,0 +1,40 @@
+name: articles list app
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  packages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm install
+        
+      - name: Verify project structure
+        run: |
+          echo "Checking project structure..."
+          ls -la
+          echo "Checking npm packages..."
+          npm list --depth=0
+
+      - name: Build Docker image
+        run: docker build -t todo-list-app .
